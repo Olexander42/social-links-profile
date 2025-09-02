@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("assets/fonts/static/Caveat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  /* Typography */
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  --font-medium: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /* Colors */
+  --white-main: #d8dee9; 
+  --address-color: #F3F957;
+  --white-about: #F6F0EF;
+  --white-button: #eff1f6;
+  --bg-color-button: #3A434E;
+  --bg-color-card: #303841  ;
+  --bg-color-main: #4f565e;
+  --shadow-color: #c695c6 ;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--white-main);
+  background-color: var(--bg-color-main);
+  height: 100vh;
+  align-content: center;
+  margin: 0;
+  padding: 1rem;
+
+}
+
+.card {
+  min-width: 240px;
+  max-width: 375px;
+  margin: auto;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: var(--bg-color-card);
+}
+
+.avatar {
+  height: 5.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: var(--font-semi-bold);
+  font-size: 1.75rem;
+  margin: 1rem 0 0.5rem;
+}
+
+address {
+  font-weight: var(--font-semi-bold);
+  color: var(--address-color);
+  font-style:normal;
+
+}
+
+.about {
+  font-family: "Caveat", sans-serif;
+  font-size: 1.25rem;
+  color: var(--white-about);
+  margin: 2rem 0 1.5rem;
+}
+
+nav {
+  font-weight: var(--font-bold);
+
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li + li {
+  margin-top: 1rem;
+}
+
+a {
+  display: block;
+  background-color: var(--bg-color-button);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: var(--white-button);
+  text-decoration: none;
+  transition: box-shadow 0.1s ease-out, transform 0.1s ease-out;
+
+  &:is(:hover, :focus-visible) {
+    box-shadow: 0px 0px 10px var(--shadow-color);
+    transform: scale(1.01);
+    outline: none;
+    
+    @media (hover: none) { /* unsets :focus-visible after tap */
+      box-shadow: none;
+      transform: scale(1.0);
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: scale(0.99);
+
+    @media (hover: none) { /* animation for tap */
+      -webkit-tap-highlight-color: transparent; /* unsets the default tap highlight */
+      transform: scale(0.98);
+    }
+  }
+
+}
+
+
+
+
