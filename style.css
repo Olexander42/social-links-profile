@@ -128,6 +128,8 @@ a {
   }
 }
 
+
+/* icons */
 li {
   a::before {
     content: "";
@@ -140,7 +142,7 @@ li {
     vertical-align: sub;
   }
   &:nth-child(1) a::before {
-    background-image: url("assets/images/github-icon.svg");
+    background-image: url("assets/images/github-icon.png");
   }
   &:nth-child(2) a::before {
     background-image: url("assets/images/frontend-mentor-icon.png");
