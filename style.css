@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Caveat";
   src: url("assets/fonts/static/Caveat-Medium.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -8,6 +9,7 @@
   src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -21,7 +23,7 @@
   --white-about: #F6F0EF;
   --white-button: #eff1f6;
   --bg-color-button: #3A434E;
-  --bg-color-card: #303841  ;
+  --bg-color-card: #303841;
   --bg-color-main: #4f565e;
   --shadow-color: #F3F957;
 }
@@ -67,7 +69,7 @@ body {
 address {
   font-weight: var(--font-semi-bold);
   color: var(--address-color);
-  font-style:normal;
+  font-style: normal;
 
 }
 
