@@ -102,6 +102,7 @@ a {
   text-decoration: none;
   transition: box-shadow 0.1s ease-out, transform 0.1s;
 
+  /* animation */
   &:is(:hover, :focus-visible) {
     box-shadow: 0px 0px 1em var(--shadow-color);
     transform: scale(1.01);
@@ -125,7 +126,31 @@ a {
       transform: scale(0.95);
     }
   }
+}
 
+li {
+  a::before {
+    content: "";
+    display: inline-block;
+    height: 1.25em;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    vertical-align: sub;
+  }
+  &:nth-child(1) a::before {
+    background-image: url("assets/images/github-icon.svg");
+  }
+  &:nth-child(2) a::before {
+    background-image: url("assets/images/frontend-mentor-icon.png");
+  }
+  &:nth-child(3) a::before {
+    background-image: url("assets/images/codepen-icon.png");
+  }
+  &:nth-child(4) a::before {
+    background-image: url("assets/images/linkedin-icon.png");
+  }
 }
 
 
